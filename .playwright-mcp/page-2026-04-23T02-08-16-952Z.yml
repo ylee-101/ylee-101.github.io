@@ -1,0 +1,56 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "ylee-101" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - list [ref=e8]:
+        - listitem [ref=e9]:
+          - link "All Posts" [ref=e10] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e11]:
+          - link "" [ref=e12] [cursor=pointer]:
+            - /url: /search
+            - generic [ref=e13]: 
+        - listitem [ref=e14]:
+          - link "" [ref=e15] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e16]: 
+            - text: 
+  - banner [ref=e17]:
+    - generic [ref=e21]:
+      - heading "ylee-101" [level=1] [ref=e22]
+      - generic [ref=e23]: 기록하고 다시 읽기
+  - generic [ref=e25]:
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - link "Hello Hugo CleanWhite 테마 적용 확인 Hugo와 GitHub Pages로 블로그를 시작하기 위한 샘플 글입니다. 이 글은 hugo-theme-cleanwhite 테마가 홈, 글 목록, 글 상세 화면에 적용되는지 확인하기 위해 추가했습니다. 앞으로는 이 파일을 수정하거나 새 글을 추가해서 블로그를 채워가면 됩니다." [ref=e29] [cursor=pointer]:
+          - /url: http://localhost:1313/post/hello-hugo/
+          - heading "Hello Hugo" [level=2] [ref=e30]
+          - heading "CleanWhite 테마 적용 확인" [level=3] [ref=e31]
+          - generic [ref=e32]: Hugo와 GitHub Pages로 블로그를 시작하기 위한 샘플 글입니다. 이 글은 hugo-theme-cleanwhite 테마가 홈, 글 목록, 글 상세 화면에 적용되는지 확인하기 위해 추가했습니다. 앞으로는 이 파일을 수정하거나 새 글을 추가해서 블로그를 채워가면 됩니다.
+        - paragraph [ref=e33]: Posted by ylee-101 on Thursday, April 23, 2026
+      - separator [ref=e34]
+    - generic [ref=e36]:
+      - separator [ref=e37]
+      - heading "FEATURED TAGS" [level=5] [ref=e38]
+      - generic [ref=e39]:
+        - link "github-pages" [ref=e40] [cursor=pointer]:
+          - /url: /tags/github-pages
+        - link "hugo" [ref=e41] [cursor=pointer]:
+          - /url: /tags/hugo
+  - contentinfo [ref=e42]:
+    - generic [ref=e45]:
+      - list [ref=e46]:
+        - listitem [ref=e47]:
+          - link " " [ref=e48] [cursor=pointer]:
+            - /url: https://github.com/ylee-101
+            - generic [ref=e49]:
+              - generic [ref=e50]: 
+              - generic [ref=e51]: 
+        - listitem [ref=e52]:
+          - link " " [ref=e53] [cursor=pointer]:
+            - /url: /index.xml
+            - generic [ref=e54]:
+              - generic [ref=e55]: 
+              - generic [ref=e56]: 
+      - paragraph [ref=e57]: Copyright © ylee-101 2026

@@ -1,7 +1,10 @@
 +++
 title = "Hello Hugo"
+subtitle = "CleanWhite 테마 적용 확인"
 date = 2026-04-23T11:00:00+09:00
 draft = false
+author = "ylee-101"
+image = "img/post-bg-coffee.jpeg"
 tags = ["hugo", "github-pages"]
 +++
 
