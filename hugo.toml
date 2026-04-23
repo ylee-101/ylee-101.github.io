@@ -1,0 +1,4 @@
+baseURL = 'https://ylee-101.github.io/'
+languageCode = 'ko-kr'
+title = 'ylee-101'
+theme = 'hugo-theme-cleanwhite'
