@@ -20,13 +20,21 @@ categories = ["개발"]
 
 ## SEO
 
+Search Engine Optimization 검색 엔진 최적화
 내용을 작성합니다.
 
 ## robots.txt
 
+hugo 템플릿을 사용하면 빌드결과 public 에 있는 것만 노출되는데, 프로젝트 루트 경로에 robots.txt 를 만들면 이 파일이 빌드가 안돼서 404에러가 난다.
+static/robots.txt 경로로 만들어줘야 hugo 빌드할 때 정상적으로 적용한다.
+
 내용을 작성합니다.
 
 ## sitemap.xml
+
+[https://www.xml-sitemaps.com/](https://www.xml-sitemaps.com/) 에 도메인을 넣으면 만들어주는걸 복사해서 루트경로에 넣었다.
+그런데 hugo 빌드하면서 public/sitemap.xml 을 자동으로 만들더니 이걸 쓴다.
+그래서 루트 경로에 넣은 sitemap.xml 은 얌전히 지웠다.
 
 내용을 작성합니다.
 
