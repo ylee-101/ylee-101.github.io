@@ -1,0 +1,7 @@
+User-Agent: *
+
+# Disallow: 검색제한할위치
+
+# Allow: 검색허용할위치
+ 
+Sitemap: https://ylee-101.github.io/sitemap.xml
