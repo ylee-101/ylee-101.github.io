@@ -2,7 +2,7 @@
 title = "깃허브를 통해 블로그를 만들자"
 subtitle = "github 으로 배포되는 블로그를 만들어보자."
 description = "github 으로 배포되는 블로그를 만들어보자."
-date = 2026-04-23T14:16:00+09:00
+date = 2026-04-28T20:29:58+09:00
 draft = false
 author = "ylee-101"
 image = "img/post-bg-coffee.jpeg"

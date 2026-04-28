@@ -2,7 +2,7 @@
 title = "검색에 노출되게 해보자"
 subtitle = "robots.txt 와 sitemap.xml 을 설정하여 블로그에 업로드한 글이 검색에 걸리거나/걸리지 않게합니다."
 description = "robots.txt 와 sitemap.xml 을 설정하여 블로그에 업로드한 글이 검색에 걸리거나/걸리지 않게합니다."
-date = 2026-04-23T13:00:00+09:00
+date = 2026-04-28T20:29:58+09:00
 draft = false
 author = "ylee-101"
 image = "img/post-bg-coffee.jpeg"
