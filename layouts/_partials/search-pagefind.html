@@ -1,0 +1,77 @@
+<section class="site-search" data-pagefind-ignore="all">
+    <form class="site-search-form" action="{{ "search/" | relURL }}" method="get" role="search">
+        <input id="site-search-input" class="site-search-input" type="search" name="q" placeholder="검색어를 입력하세요" aria-label="검색어">
+        <button class="site-search-button" type="submit">검색</button>
+    </form>
+    <p id="site-search-status" class="site-search-status">검색어를 입력하면 글 제목과 본문에서 찾아볼 수 있습니다.</p>
+    <div id="site-search-results" class="site-search-results"></div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var params = new URLSearchParams(window.location.search);
+    var query = (params.get('q') || '').trim();
+    var input = document.getElementById('site-search-input');
+    var status = document.getElementById('site-search-status');
+    var results = document.getElementById('site-search-results');
+
+    input.value = query;
+
+    if (!query) {
+        return;
+    }
+
+    status.textContent = '검색 중입니다.';
+
+    fetch('{{ "search-index.json" | relURL }}')
+        .then(function (response) {
+            if (!response.ok) {
+                throw new Error('Search index request failed');
+            }
+            return response.json();
+        })
+        .then(function (items) {
+            var normalizedQuery = query.toLowerCase();
+            var matches = items.filter(function (item) {
+                return [
+                    item.title,
+                    item.description,
+                    item.content,
+                    (item.tags || []).join(' ')
+                ].join(' ').toLowerCase().indexOf(normalizedQuery) !== -1;
+            });
+
+            if (!matches.length) {
+                status.textContent = '검색 결과가 없습니다.';
+                results.innerHTML = '';
+                return;
+            }
+
+            status.textContent = matches.length + '개의 검색 결과가 있습니다.';
+            results.innerHTML = matches.map(function (item) {
+                return [
+                    '<article class="site-search-result">',
+                    '<a href="' + item.url + '">',
+                    '<h2>' + escapeHtml(item.title) + '</h2>',
+                    '<p>' + escapeHtml(item.description || '') + '</p>',
+                    '<span>' + escapeHtml(item.date || '') + '</span>',
+                    '</a>',
+                    '</article>'
+                ].join('');
+            }).join('');
+        })
+        .catch(function () {
+            status.textContent = '검색을 불러오지 못했습니다.';
+            results.innerHTML = '';
+        });
+});
+
+function escapeHtml(value) {
+    return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+}
+</script>

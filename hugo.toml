@@ -8,6 +8,15 @@ hasCJKLanguage = true
 [pagination]
   pagerSize = 5
 
+[outputs]
+  home = ['html', 'rss', 'searchindex']
+
+[outputFormats.searchindex]
+  mediaType = 'application/json'
+  baseName = 'search-index'
+  isPlainText = true
+  notAlternative = true
+
 [params]
   header_image = 'img/home-bg-jeep.jpg'
   SEOTitle = 'ylee-101'
@@ -27,6 +36,7 @@ hasCJKLanguage = true
   featured_condition_size = 0
   sidebar_about_description = '개발 기록과 개인 블로그'
   dark_mode_toggle = true
+  custom_css = ['css/custom.css']
 
   [params.social]
     rss = true

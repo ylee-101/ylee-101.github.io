@@ -1,0 +1,15 @@
+{{- $pages := where (where .Site.RegularPages "Type" "post") "Draft" false -}}
+{{- $items := slice -}}
+{{- range $pages -}}
+  {{- if not .Params.search_exclude -}}
+    {{- $items = $items | append (dict
+      "title" .Title
+      "url" .RelPermalink
+      "date" (.Date.Format "2006-01-02")
+      "description" (or .Description .Params.subtitle (.Summary | plainify))
+      "content" (.Plain | plainify)
+      "tags" (.Params.tags | default slice)
+    ) -}}
+  {{- end -}}
+{{- end -}}
+{{- $items | jsonify -}}

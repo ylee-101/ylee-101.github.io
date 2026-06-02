@@ -1,0 +1,28 @@
+{{- $posts := slice -}}
+{{- range where .Site.RegularPages "Section" "post" -}}
+    {{- if and (ne .Permalink $.Permalink) (lt (len $posts) 3) -}}
+        {{- $posts = $posts | append . -}}
+    {{- end -}}
+{{- end -}}
+{{- if gt (len $posts) 0 -}}
+<section class="post-top-list" data-pagefind-ignore="all">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-top-list-header">
+                    <h2>최근 글</h2>
+                    <a href="{{ "/" | relLangURL }}">전체 글</a>
+                </div>
+                <div class="post-top-list-items">
+                    {{ range $posts }}
+                    <a class="post-top-list-link" href="{{ .RelPermalink }}">
+                        <span class="post-top-list-title">{{ .Title }}</span>
+                        <span class="post-top-list-date">{{ .Date.Format "2006.01.02" }}</span>
+                    </a>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{- end -}}
