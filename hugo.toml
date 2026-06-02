@@ -9,11 +9,17 @@ hasCJKLanguage = true
   pagerSize = 5
 
 [outputs]
-  home = ['html', 'rss', 'searchindex']
+  home = ['html', 'rss', 'searchindex', 'googlesitemap']
 
 [outputFormats.searchindex]
   mediaType = 'application/json'
   baseName = 'search-index'
+  isPlainText = true
+  notAlternative = true
+
+[outputFormats.googlesitemap]
+  mediaType = 'application/xml'
+  baseName = 'google-sitemap'
   isPlainText = true
   notAlternative = true
 

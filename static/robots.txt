@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ylee-101.github.io/sitemap.xml
+Sitemap: https://ylee-101.github.io/google-sitemap.xml
